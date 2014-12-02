@@ -9,7 +9,7 @@ with open(path.join(here, 'DESCRIPTION.rst'), encoding='utf-8') as f:
     long_description = f.read()
 
 setup(
-    name='GWAPortalpipeline',
+    name='gwaportalpipeline',
     version='0.2.0',
     description='Analysis-pipeline for GWA-Portal',
     long_description=long_description,
@@ -38,7 +38,6 @@ setup(
         "numpy >=1.6.1",
         "h5py >=2.1.3",
 	"PyGWAS >= 0.1.0"
-        ],
-    )
+        ]
 )
 

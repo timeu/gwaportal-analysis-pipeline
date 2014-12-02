@@ -1,6 +1,6 @@
 from kombu import Exchange, Queue
 import os
-BROKER_URL = os.environ['BROKER']
+BROKER_URL = os.environ['CELERY_BROKER']
 CELERY_RESULT_BACKEND = 'rpc'
 CELERY_RESULT_PERSISTENT = True
 CELERY_TASK_SERIALIZER = 'json'
