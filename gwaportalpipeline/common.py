@@ -1,8 +1,8 @@
 import logging,os
 from rest import Restclient
 
-LOCAL_DATA_FOLDER = '/DATA/GWASDATA'
-GENOTYPE_FOLDER = '/DATA/GENOTYPE'
+LOCAL_DATA_FOLDER = '/DATA'
+GENOTYPE_FOLDER = '/GENOTYPE'
 
 REST_HOST = os.environ['REST_HOST']
 REST_USERNAME = os.environ['REST_USERNAME']
