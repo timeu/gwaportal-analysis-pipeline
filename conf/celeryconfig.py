@@ -14,14 +14,14 @@ enrichment_exchange = Exchange('enrichment',type='direct')
 
 
 CELERY_QUEUES = (
-    Queue('gwas.portal.slow', gwas_exchange, routing_key='gwas.portal.slow'),
-    Queue('gwas.portal.fast', gwas_exchange, routing_key='gwas.portal.fast'),
+    Queue('gwas.portal.worker.slow', gwas_exchange, routing_key='gwas.portal.worker.slow'),
+    Queue('gwas.portal.worker.fast', gwas_exchange, routing_key='gwas.portal.worker.fast'),
     Queue('enrichment',enrichment_exchange,routing_key='enrichment')
 )
 
    
 CELERY_ROUTES = {
-        'gwaportalpipeline.gwas.run_gwas':{'queue':'gwas.portal.fast'},
+        'gwaportalpipeline.gwas.run_gwas':{'queue':'gwas.portal.worker.fast'},
         'gwaportalpipeline.enrichment.candidate_gene_list_enrichment':{'queue':'enrichment'}
 }
 

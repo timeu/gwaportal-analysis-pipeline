@@ -37,6 +37,7 @@ def run_gwas(studyid):
     # create folders
     fh = None
     retval = {'status':'OK','studyid':studyid}
+    base_folder = None
     try:
         base_folder = os.path.join(LOCAL_DATA_FOLDER,str(studyid))
         input_folder=  os.path.join(base_folder,'INPUT')

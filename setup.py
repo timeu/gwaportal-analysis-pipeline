@@ -13,7 +13,7 @@ setup(
     version='0.2.1',
     description='Analysis-pipeline for GWA-Portal',
     long_description=long_description,
-    url='https://github.com/pypa/gwaportalpipeline',
+    url='https://github.com/timeu/gwaportal-analysis-pipeline',
     author='Uemit Seren',
     author_email='uemit.seren@gmail.com',
     license='MIT',
@@ -37,7 +37,7 @@ setup(
         "requests >=1.1.0",
         "numpy >=1.6.1",
         "h5py >=2.1.3",
-	"PyGWAS >= 0.1.0"
+	"PyGWAS >= 0.1.1"
         ]
 )
 
