@@ -10,7 +10,7 @@ with open(path.join(here, 'DESCRIPTION.rst'), encoding='utf-8') as f:
 
 setup(
     name='gwaportalpipeline',
-    version='0.2.1',
+    version='0.2.2',
     description='Analysis-pipeline for GWA-Portal',
     long_description=long_description,
     url='https://github.com/timeu/gwaportal-analysis-pipeline',
