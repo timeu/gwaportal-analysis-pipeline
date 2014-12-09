@@ -37,7 +37,7 @@ setup(
         "requests >=1.1.0",
         "numpy >=1.6.1",
         "h5py >=2.1.3",
-	"PyGWAS >= 0.1.1"
+	"PyGWAS >= 0.1.2"
         ]
 )
 
