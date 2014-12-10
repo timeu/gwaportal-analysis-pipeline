@@ -5,12 +5,12 @@ from os import path
 here = path.abspath(path.dirname(__file__))
 
 # Get the long description from the relevant file
-with open(path.join(here, 'DESCRIPTION.rst'), encoding='utf-8') as f:
+with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
     long_description = f.read()
 
 setup(
     name='gwaportalpipeline',
-    version='0.2.2',
+    version='0.2.3',
     description='Analysis-pipeline for GWA-Portal',
     long_description=long_description,
     url='https://github.com/timeu/gwaportal-analysis-pipeline',
@@ -37,7 +37,7 @@ setup(
         "requests >=1.1.0",
         "numpy >=1.6.1",
         "h5py >=2.1.3",
-	"PyGWAS >= 0.1.2"
+	"PyGWAS >= 0.1.3"
         ]
 )
 
