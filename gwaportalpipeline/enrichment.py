@@ -34,7 +34,7 @@ def candidate_gene_list_enrichment(candidate_gene_list_id,study_id,genotypeid,wi
         if len(candidate_genes) == 0:
             raise Exception('No genes found in candidate gene list') 
         logger.info('Retrieve HDF5 File')
-        pval_file = restclient.download_study_file(study_id)
+        pval_file = restclient.download_study_file(study_id,LOCAL_DATA_FOLDER)
         logger.info('Retrieve genotype')
         genotypeData = _load_genotype_(GENOTYPE_FOLDER,genotypeid) 
         chr_regions = genotypeData.chr_regions

@@ -9,11 +9,11 @@ class Restclient(object):
         self.auth = (username,password)
 
 
-    def download_study_file(self,studyid):
+    def download_study_file(self,studyid,directory=None):
         headers = {'Accept':'application/x-hdf'}
         URL = '%s/provider/study/%s/pvalues.hdf5' % (self.host,studyid)
         r = requests.get(URL,headers=headers,auth=self.auth,stream=True)
-        path = tempfile.mkstemp(suffix='.hdf5')[1]
+        path = tempfile.mkstemp(suffix='.hdf5',dir=directory)[1]
         if r.status_code == 200:
     	    with open(path, 'wb') as f:
                 r.raw.decode_content = True

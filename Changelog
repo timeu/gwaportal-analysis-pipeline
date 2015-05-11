@@ -1,3 +1,8 @@
+0.2.5 
+--
+* Updated PyGWAS to 0.1.7
+* Fixed issue to download the hdf5 files to LOCAL_DATA_DIR instead of tmp
+
 0.2.4
 --
 * Updated PyGWAS to 0.1.4

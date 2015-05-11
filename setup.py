@@ -10,7 +10,7 @@ with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
 
 setup(
     name='gwaportalpipeline',
-    version='0.2.4',
+    version='0.2.5',
     description='Analysis-pipeline for GWA-Portal',
     long_description=long_description,
     url='https://github.com/timeu/gwaportal-analysis-pipeline',
@@ -37,7 +37,7 @@ setup(
         "requests >=1.1.0",
         "numpy >=1.6.1",
         "h5py >=2.1.3",
-	"PyGWAS >= 0.1.4"
+	"PyGWAS >= 0.1.7"
         ]
 )
 
