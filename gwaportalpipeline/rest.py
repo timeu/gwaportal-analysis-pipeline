@@ -1,6 +1,7 @@
 import requests
 import shutil
 import tempfile
+import os
 
 class Restclient(object):
 
@@ -13,12 +14,12 @@ class Restclient(object):
         headers = {'Accept':'application/x-hdf'}
         URL = '%s/provider/study/%s/pvalues.hdf5' % (self.host,studyid)
         r = requests.get(URL,headers=headers,auth=self.auth,stream=True)
-        path = tempfile.mkstemp(suffix='.hdf5',dir=directory)[1]
         if r.status_code == 200:
-    	    with open(path, 'wb') as f:
+            fd,path = tempfile.mkstemp(suffix='.hdf5',dir=directory)
+            with os.fdopen(fd,'w') as f:
                 r.raw.decode_content = True
                 shutil.copyfileobj(r.raw, f) 
-                return f.name
+            return path
         raise Exception(r.text)
 
     def get_candidate_genes(self,candidate_gene_id):
