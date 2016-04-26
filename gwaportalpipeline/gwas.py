@@ -62,7 +62,7 @@ def run_gwas(studyid):
         method = data['analysisMethod']
         genotype = data['genotype']
         phenotype_data = data['csvData']
-	transformation = data['transformation']
+        transformation = data['transformation']
         with open(phenotype_file,'w') as fd:
             fd.write(phenotype_data)
         # perform gwas
@@ -85,22 +85,4 @@ def run_gwas(studyid):
             pygwas_logger.removeHandler(fh)
         if base_folder is not None and retval['status'] == 'OK':
             shutil.rmtree(base_folder,ignore_errors=True)
-    return retval
-
-
-
-
-@celery.task(serializer='json')
-def test():
-    fh = None
-    fh = CeleryProgressLogHandler(test)
-    logger.addHandler(fh)
-    logger.info('start test')
-    logger.info('log test no celery event',extra={'some data':'test'})
-    logger.info('log test celery event',extra={'progress':50})
-    logger.info('log test celery event and custom text',extra={'progress':80,'task':'text'})
-    import time
-    time.sleep(5)
-    logger.removeHandler(fh);
-    return  {'status':'OK'}
-     
+    return retval   
