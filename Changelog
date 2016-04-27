@@ -1,3 +1,11 @@
+0.2.9
+-- 
+* Bugfix: Correctly pass genotype folder to PyGWAS
+
+0.2.8
+--
+* Updated PyGWAS to 1.0.02
+
 0.2.7
 --
 * Updated PyGWAS to 0.1.10
