@@ -68,7 +68,7 @@ def run_gwas(studyid):
         # perform gwas
         logger.info('Start GWAS analysis',extra={'progress':1})
         genotype_file = '%s/%s' % (GENOTYPE_FOLDER,genotype)
-        result = pygwas.perform_gwas(phenotype_file,method.lower(),genotype_file,transformation.lower())
+        result = pygwas.perform_gwas(phenotype_file,method.lower(),genotype_file)
         logger.info('Saving output files',extra={'progress':95})
         result.save_as_hdf5(hdf5_file)
         del result
